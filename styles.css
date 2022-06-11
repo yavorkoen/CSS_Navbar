@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.header {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+    background-color: rgb(10, 10, 10);
+    color: white;
+}
+
+.header li {
+    list-style-type: none;
+    color: inherit;
+}
+.header li::first-letter {
+    text-transform: capitalize;
+}
+.header a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo {
+   
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 2px solid rgb(255, 137, 137);
+    border-bottom: 2px solid rgb(83, 157, 83);
+    padding: 0 8px;
+}
+
+
+.login {
+    font-size: 2rem;
+}
+
+.login:after {
+    display: inline-block;
+    position: absolute;
+    content: "";
+    margin-left: 5px;
+    width: 1px;
+    height: 2rem; 
+    margin-left: 40px;
+    top: 10px;
+    background: rgba(255,255,255,.30);
+}
+
+
+.navbar {
+    width: 60%;
+}
+
+.navbar-list {
+    display: flex;
+    justify-content: space-around;
+    color: inherit;
+}
+
+.phone-view {
+    display: none;
+}
+
+@media (max-width: 600px) {
+    .phone-view {
+        display: block;
+    }
+    /* .desktop-view {
+        display: none;
+    } */
+    .login {
+        order: 1;
+    }
+    .logo {
+        order: 2;
+    }
+    .burger-menu {
+        order: 3;
+    }
+    .login:after {
+        display: none;
+    }
+    .navbar {
+        width: 100%;
+        position: absolute;
+        top: 8vh;
+        right: 0px;
+        color: black;
+        background-color: rgb(10, 10, 10);
+        color: white;
+    } 
+    .navbar-list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}
